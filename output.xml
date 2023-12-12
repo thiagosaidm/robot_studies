@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.7 on win32)" generated="20231212 20:29:01.012" rpa="false" schemaversion="4">
+<suite id="s1" name="VariaveisEscoposArgumentos" source="C:\Users\Desktop\Downloads\VariaveisEscoposArgumentos\VariaveisEscoposArgumentos">
+<suite id="s1-s1" name="Variaveis" source="C:\Users\Desktop\Downloads\VariaveisEscoposArgumentos\VariaveisEscoposArgumentos\variaveis.robot">
+<test id="s1-s1-t1" name="Criar e Imprimir E-mail Personalizado" line="7">
+<kw name="Set Variable" library="BuiltIn">
+<var>${nome}</var>
+<arg>Said</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231212 20:29:01.059" level="INFO">${nome} = Said</msg>
+<status status="PASS" starttime="20231212 20:29:01.059" endtime="20231212 20:29:01.059"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${sobrenome}</var>
+<arg>Santos</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231212 20:29:01.061" level="INFO">${sobrenome} = Santos</msg>
+<status status="PASS" starttime="20231212 20:29:01.061" endtime="20231212 20:29:01.061"/>
+</kw>
+<kw name="Criar E-mail Personalizado">
+<var>${email}</var>
+<arg>${nome}</arg>
+<arg>${sobrenome}</arg>
+<kw name="Generate Random String" library="String">
+<var>${palavra_aleatoria}</var>
+<arg>8</arg>
+<arg>[NUMBERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<msg timestamp="20231212 20:29:01.063" level="INFO">${palavra_aleatoria} = 68549705</msg>
+<status status="PASS" starttime="20231212 20:29:01.062" endtime="20231212 20:29:01.063"/>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<var>${email}</var>
+<arg>${nome}</arg>
+<arg>${sobrenome}</arg>
+<arg>${palavra_aleatoria}</arg>
+<arg>@testerobot.com</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20231212 20:29:01.063" level="INFO">${email} = Said Santos 68549705 @testerobot.com</msg>
+<status status="PASS" starttime="20231212 20:29:01.063" endtime="20231212 20:29:01.063"/>
+</kw>
+<msg timestamp="20231212 20:29:01.063" level="INFO">${email} = Said Santos 68549705 @testerobot.com</msg>
+<status status="PASS" starttime="20231212 20:29:01.062" endtime="20231212 20:29:01.063"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>E-mail personalizado: ${email}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20231212 20:29:01.064" endtime="20231212 20:29:01.064"/>
+</kw>
+<status status="PASS" starttime="20231212 20:29:01.058" endtime="20231212 20:29:01.064"/>
+</test>
+<doc>Exemplo de teste usando Robot Framework</doc>
+<status status="PASS" starttime="20231212 20:29:01.044" endtime="20231212 20:29:01.066"/>
+</suite>
+<status status="PASS" starttime="20231212 20:29:01.014" endtime="20231212 20:29:01.068"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="VariaveisEscoposArgumentos">VariaveisEscoposArgumentos</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Variaveis">VariaveisEscoposArgumentos.Variaveis</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20231212 20:29:01.056" level="ERROR">Error in file 'C:\Users\Desktop\Downloads\VariaveisEscoposArgumentos\VariaveisEscoposArgumentos\variaveis.robot' on line 4: Importing library 'Faker' failed: ModuleNotFoundError: No module named 'Faker'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\Desktop\Downloads\VariaveisEscoposArgumentos\VariaveisEscoposArgumentos
+  C:\Users\Desktop\Downloads\VariaveisEscoposArgumentos\VariaveisEscoposArgumentos
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2032.0_x64__qbz5n2kfra8p0\python311.zip
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2032.0_x64__qbz5n2kfra8p0\DLLs
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2032.0_x64__qbz5n2kfra8p0\Lib
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2032.0_x64__qbz5n2kfra8p0
+  C:\Users\Desktop\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages
+  C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.11_3.11.2032.0_x64__qbz5n2kfra8p0\Lib\site-packages</msg>
+</errors>
+</robot>
